@@ -20,11 +20,11 @@
       
      
       <h1 class="text-center mt-4 mb-4">
-        Stark careers hello works
+        {{company_name}} careers 
       </h1>
       <img class="img-fluid" id="banner" src="static/banner.jpg"  height="320" alt="work hard">
       <h2 class="text-center mt-2 mb-4" >
-        About stark 
+        About {{company_name}}
         
       </h2>
       <p class="lead">
@@ -34,14 +34,17 @@
         open positions
       </h2 >
       <p>
-        jobs should display here
+        <!-- This syntax is provided by the flask  ,templeting the sytanx this is the way to insert the dynamic data into the html or css-->
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
       </p>
       
       <div class="text-center">
       <button class="btn btn-primary btn-lg" >
         Contat us
       </button>
-        <p class="mt-4">Copyright 2025, Stark</p>
+        <p class="mt-4">Copyright 2025, {{company_name}}</p>
         
       </div>
     </div>
