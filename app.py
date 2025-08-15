@@ -19,7 +19,7 @@ JOBS = [
     "id": 3,
     'title': "ML Engineer",
     'location': "Remote",
-    'salary': 'Rs. 10,00,000'
+    'salary': 'Rs. 15,00,000'
   },
   {
     "id": 4,
