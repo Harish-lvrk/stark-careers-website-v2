@@ -12,24 +12,33 @@
     #banner{
       width: 100%;
       height: 360px;
+      object-fit:cover;
     }
   </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="static/banner.jpg"  height="320" alt="work hard">
     <div class="container">
       
      
       <h1 class="text-center mt-4 mb-4">
         {{company_name}} careers 
       </h1>
-      <img class="img-fluid" id="banner" src="static/banner.jpg"  height="320" alt="work hard">
-      <h2 class="text-center mt-2 mb-4" >
-        About {{company_name}}
-        
+    
+      
+      
       </h2>
-      <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius nulla tortor, eget porttitor nibh elementum vitae. Maecenas felis urna, consectetur nec mi nec, porta cursus enim. Duis vel commodo leo. Sed aliquam bibendum metus eget auctor. Donec quis elementum velit. In fermentum tincidunt nulla, non ultrices nisl dignissim at. Donec ut pulvinar ante, in varius dolor. Vestibulum blandit ornare dui, nec laoreet est laoreet ut. Duis gravida neque nec finibus suscipit.
-      </p>
+      <div class="row" style="margin-bottom:24px;">
+        <div class="col-md-6">
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius nulla tortor, eget porttitor nibh elementum vitae. Maecenas felis urna, consectetur nec mi nec, porta cursus enim. Duis vel commodo leo. Sed aliquam bibendum metus eget auctor. Donec quis elementum velit. In fermentum tincidunt nulla, non ultrices nisl dignissim at. Donec ut pulvinar ante, in varius dolor. Vestibulum blandit ornare dui, nec laoreet est laoreet ut. Duis gravida neque nec finibus suscipit.
+        </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img src="\static\people.jpg" style="height: 320px;border-radius:4px;">
+        </div>
+      </div>
       <h2 class="text-center mt-2 mb-4">
         Job openings
       </h2 >
@@ -41,12 +50,12 @@
       </p>
       
       <div class="text-center">
-      <button class="btn btn-primary btn-lg" >
+      <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=jobs@hellostark.ai&su=My%20name%3A%20%3Cyour%20name%20here%3E%20-%20My%20question%3A%20%3Cyour%20query%20here%3E&body=Please%20describe%20your%20query%20in%20detail%20here..." target="_blank" class="btn btn-primary btn-lg" >
         Contat us
-      </button>
-        <p class="mt-4">Copyright 2025, {{company_name}}</p>
-        
+     
+      </a>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
