@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'bootstrap.html' %}
+    <style>
+      .application-section {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      }
+      .application-section h3 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      .application-value {
+        font-size: 1.1rem;
+        color: #495057;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+  
+    <div class="container">
+      <p>YOur application for the role of {{job['title']}} at stark is submitted successfully</p>
+      <div class="application-section">
+        <h3>👤 Name</h3>
+        <p class="application-value">{{ application['full_name'] }}</p>
+
+        <h3>📧 Email</h3>
+        <p class="application-value">{{ application['email'] }}</p>
+
+        <h3>🔗 LinkedIn</h3>
+        <p class="application-value">
+          <a href="{{ application['linkdin_url'] }}" target="_blank">{{ application['linkdin_url'] }}</a>
+        </p>
+
+        <h3>🎓 Education</h3>
+        <p class="application-value">{{ application['education'] }}</p>
+
+        <h3>💼 Work Experience</h3>
+        <p class="application-value">{{ application['work_experiance'] }}</p>
+
+        <h3>📄 Resume</h3>
+        <p class="application-value">
+          <a href="{{ application['resume_url'] }}" target="_blank">View Resume</a>
+        </p>
+      </div>
+    </div>
+
+    {% include 'footer.html' %}
+  </body>
+</html>

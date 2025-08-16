@@ -75,12 +75,13 @@
       </div>
 
       <div class="text-center mt-5 mb-5">
-        <a href="mailto:careers@stark.io?subject=Application for {{job.title}}" class="btn btn-primary btn-lg apply-btn">r
+        <a href="mailto:careers@stark.io?subject=Application for {{job.title}}" class="btn btn-primary btn-lg apply-btn">
           🚀 Apply Now
         </a>
       </div>
+      {% include 'application_form.html' %}
     </div>
-
+    
     {% include 'footer.html' %}
   </body>
 </html>
