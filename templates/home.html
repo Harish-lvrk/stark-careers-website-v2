@@ -5,20 +5,13 @@
       Stark careers
     </title>
     
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <style>
-    #banner{
-      width: 100%;
-      height: 360px;
-      object-fit:cover;
-    }
-  </style>
+    {% include 'bootstrap.html'%}
+  
   </head>
   <body>
     {% include 'nav.html' %}
-    <img class="img-fluid" id="banner" src="static/banner.jpg"  height="320" alt="work hard">
+
+    {% include 'banner.html' %}
     <div class="container">
       
      
